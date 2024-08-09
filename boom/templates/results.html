@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Results for "{{ query }}"</h1>
+        {% if results %}
+            <ul class="list-group">
+                {% for result in results %}
+                    <li class="list-group-item">
+                        <h5>{{ result.title }}</h5>
+                        <p><strong>Author(s):</strong> {{ result.authors }}</p>
+                        <p><strong>Description:</strong> {{ result.description }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>
+            Title not found; please note that nearest neighbours search
+            relies on lexical search, so the title of the desired book
+            must exactly match the query.
+            </p>
+        {% endif %}
+        <a href="/" class="btn btn-secondary mt-3">Back to Search</a>
+    </div>
+</body>
+</html>
