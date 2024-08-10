@@ -133,10 +133,7 @@ def extract_ol_books(
     books = {}
 
     with open(path_works) as file:
-        for i, line in enumerate(file):
-            if i%250_000 == 0:
-                print(i)
-
+        for line in file:
             work = json.loads(line.split('\t')[-1])
 
             if 'description' in work and 'authors' in work:
