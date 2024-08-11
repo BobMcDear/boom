@@ -1,0 +1,7 @@
+Flask
+langdetect==1.0.9
+pandas
+regex
+safetensors
+sentence_transformers
+torch>=1.0.0
