@@ -1,5 +1,5 @@
 """
-Web app search engine for looking up books and similar entries.
+Search engine web app for looking up books and similar entries.
 """
 
 
@@ -46,7 +46,7 @@ def search():
 
 
 if __name__ == '__main__':
-    parser = ArgumentParser(description='Runs the web app search engine.')
+    parser = ArgumentParser(description='Runs the search engine web app.')
     parser.add_argument('--path-database',
                         type=str,
                         default='database/',
